@@ -21,12 +21,12 @@ a {
 /* Grid */
 #grid-layout {
     display: grid;
-    grid-template-columns: 12;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
 }
 
 nav {
     display: grid;
-    grid-template-columns: 4;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
     background-color: #2C3E50;
     box-shadow: 1px 1px 2px #E74C3C;
     width: 99vw;
@@ -45,19 +45,25 @@ nav {
         grid-column: 2/5;
         margin: 40px 100px;
     }
+    #linki img {
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        vertical-align: bottom;
+    }
     nav a,{
         color: #ECF0F1;
     }
     nav a:visited {
         color: #ECF0F1;
     }
-    nav a:hover, #logo:hover {
+    nav a:hover, a:hover {
         color: orangered;
         text-shadow: 1px 1px 2px rgba(182, 182, 182, 0.1);
     }
     footer {
         display: grid;
-        grid-column: 1/12;
+        grid-column: 1/4;
         grid-row: 5/6;
         background-color: #2C3E50;
         box-shadow: 1px 1px 2px #E74C3C;
@@ -70,7 +76,7 @@ nav {
         footer a:visited {
             color: #ECF0F1;
         }
-        footer a:hover, #logo:hover {
+        footer a:hover {
             color: orangered;
             text-shadow: 1px 1px 2px rgba(182, 182, 182, 0.1);
         }
@@ -78,7 +84,7 @@ nav {
         
 #main {
     display: grid;
-    grid-column: 1/12;
+    grid-column: 1/4;
     grid-row: 2/3;
     height: 90vh;
     width: 99vw;
@@ -92,14 +98,14 @@ article {
 
 #contact-us {
     display: grid;
-    grid-column: 1/12;
+    grid-column: 1/4;
     grid-row: 3/4;
     width: 99vw;
     justify-content: center;
 }
 #galeria {
     display: grid;
-    grid-column: 1/12;
+    grid-column: 1/4;
     grid-row: 4/5;
     width: 99vw;
     min-height: 100vh;
@@ -157,7 +163,7 @@ ul {
 
 #bg {
     position: absolute;
-    background: url(https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg);
+    background: url(bg.jpg);
     background-color: #2C3E50;
     background-position: center;
     background-repeat: no-repeat;
@@ -166,8 +172,12 @@ ul {
     height: 100vh;
     z-index: -1;
     opacity: 0.8;
+    filter: blur(2px);
 }
 
+article a {
+    color: rgb(255, 25, 0);
+}
 article h1 {
     font-size: 8rem;
     color: rgb(255, 25, 0);
@@ -222,8 +232,12 @@ legend, label {
 }
 
 input, select {
+    height: 3em;    
     width: 100%;
-    height: 3em;
+}
+
+@media (min-width: 700px) {
+
 }
 
 textarea {    
@@ -259,24 +273,8 @@ button {
     margin: auto 10px;
 }
 
-.pic {
-    padding: 0;
-    background-image: url(https://images.pexels.com/photos/618613/pexels-photo-618613.jpeg);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100%;
-    height: 250px;
-}
-.pic1 {
-    padding: 0;
-    background-image: url(https://images.pexels.com/photos/1816593/pexels-photo-1816593.jpeg);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100%;
-    height: 250px;
-}
+
+
 .opis {
     padding: 0;
 }
@@ -288,4 +286,48 @@ p::selection, h1::selection, h2::selection, h3::selection,option {
 
 #fleks-dwa h3 {
     color: orangered;
+}
+
+/* Galeria */
+
+.pic {
+    padding: 0;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 250px;
+}
+
+#zdjecie1 {
+    background-image: url(https://images.pexels.com/photos/618613/pexels-photo-618613.jpeg);
+}
+
+#zdjecie2 {
+    background-image: url(https://images.pexels.com/photos/1816593/pexels-photo-1816593.jpeg);
+}
+
+#zdjecie3 {
+    background-image: url(https://images.pexels.com/photos/2817549/pexels-photo-2817549.jpeg);
+}
+#zdjecie4 {
+    background-image: url(https://images.pexels.com/photos/2123337/pexels-photo-2123337.jpeg);
+}
+#zdjecie5 {
+    background-image: url(https://images.pexels.com/photos/1727280/pexels-photo-1727280.jpeg);
+}
+#zdjecie6 {
+    background-image: url(https://images.pexels.com/photos/3059751/pexels-photo-3059751.jpeg);
+}
+#zdjecie7 {
+    background-image: url(https://images.pexels.com/photos/3080546/pexels-photo-3080546.jpeg);
+}
+#zdjecie8 {
+    background-image: url(https://images.pexels.com/photos/3088224/pexels-photo-3088224.jpeg);
+}
+#zdjecie9 {
+    background-image: url(https://images.pexels.com/photos/2698871/pexels-photo-2698871.jpeg);
+}
+#zdjecie10 {
+    background-image: url(https://images.pexels.com/photos/3099358/pexels-photo-3099358.jpeg);
 }
