@@ -266,7 +266,9 @@ input, select {
     height: 3em;    
     width: 100%;
 }
-
+textarea {
+    width: 100%;
+}
 
 textarea {    
    resize: none;
